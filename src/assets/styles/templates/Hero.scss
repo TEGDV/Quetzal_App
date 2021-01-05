@@ -1,0 +1,21 @@
+.herocontainer {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 160px 160px minmax(250px, 1fr);
+  grid-template-rows: 120px 1fr 1fr 1fr 1fr 1fr 50px 1fr 1fr 120px;
+  width: 1440px;
+  width: -webkit-available;
+  height: 100%;
+  grid-template-areas:
+    " . . . . "
+    "portfolio logo logo about"
+    "portfolio logo logo about"
+    "portfolio logo logo about"
+    "products logo logo blog"
+    "products softa softa blog"
+    "products softa softa blog"
+    ". linkButton linkButton ."
+    ". . . ."
+    "footer footer footer footer";
+  align-items: center;
+  justify-content: center;
+}
