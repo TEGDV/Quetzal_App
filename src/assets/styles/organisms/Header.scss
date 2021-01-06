@@ -4,17 +4,31 @@
   justify-content: center;
   height: 124px;
   width: 100%;
+  background-color: transparent;
 }
 
 .header__container {
   display: Flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 100%;
-  width: 920px;
+  max-width: 1440px;
+  width: 100%;
+  background-color: transparent;
 }
 
-.logo {
+.logo__header {
   height: 100%;
   width: 120px;
+}
+
+.selectedLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 120px;
+  background-color: rgba($color: #ffffff, $alpha: 0.05);
+
+  border-radius: 50% 50%;
 }
