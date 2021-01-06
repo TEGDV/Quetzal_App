@@ -8,7 +8,7 @@ import "../../assets/styles/templates/Hero.scss";
 const Hero = () => {
   return (
     <div className="herocontainer">
-      <Logo />
+      <Logo className="logo" />
       <HeroTopic
         topicTitle="Software Development"
         text="Make Your Big Ideas Come True"
