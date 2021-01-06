@@ -21,7 +21,7 @@ const Hero = () => {
       <HeroTopic topicTitle="About" text="Who Are Behind Quetzal" />
       <HeroTopic
         topicTitle="Products"
-        text="Some Magic Already Exist Just Take A Look"
+        text="Some Magic Already Exist Take A Look"
       />
       <HeroTopic topicTitle="Blog" text="Stories Makes Everything Better" />
       <Footer>
