@@ -1,0 +1,20 @@
+@import "../Vars.scss";
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 596px;
+  background-color: transparent;
+  div,
+  p,
+  h6 {
+    background-color: transparent;
+  }
+}
+
+.container__buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 480px;
+}
