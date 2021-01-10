@@ -12,7 +12,11 @@ const About = () => {
         role="Back End Developer"
       />
       <div className="container__buttons">
-        <Button className="download-button" text="Dowloand CV" />
+        <Button
+          path="https://drive.google.com/uc?export=download&id=1VMdmmczJSSUYvz3LQKjLR-j_nHQu1Y1M"
+          className="download-button"
+          text="Dowloand CV"
+        />
         <Button path="/" text="Get In Touch" className="link-button" />
       </div>
     </section>
