@@ -12,8 +12,8 @@ const About = () => {
         role="Back End Developer"
       />
       <div className="container__buttons">
-        <Button path="/" text="Dowloand CV" />
-        <Button path="/" text="Get In Touch" />
+        <Button className="download-button" text="Dowloand CV" />
+        <Button path="/" text="Get In Touch" className="link-button" />
       </div>
     </section>
   );
