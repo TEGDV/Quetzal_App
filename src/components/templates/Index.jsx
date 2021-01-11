@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Header from "../organisms/Header.jsx";
 import "../../assets/styles/templates/Index.scss";
 import About from "./About.jsx";
