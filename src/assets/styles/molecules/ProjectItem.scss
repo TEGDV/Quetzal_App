@@ -1,0 +1,13 @@
+.project__carousel-item {
+  width: 320px;
+  height: 240px;
+  display: flex;
+  align-items: end;
+}
+
+.carousel-link {
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+}

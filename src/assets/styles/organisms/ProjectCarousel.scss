@@ -1,0 +1,10 @@
+.project__carousel-container {
+  display: grid;
+  height: 90%;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+  scrollbar-width: none;
+  overflow: scroll;
+  grid-gap: 0px 50px;
+  width: 80vw;
+}

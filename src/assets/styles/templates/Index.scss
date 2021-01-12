@@ -1,3 +1,10 @@
 .indexcontainer {
   width: 1440px;
 }
+
+section {
+  background-color: transparent;
+  * {
+    background-color: transparent;
+  }
+}
