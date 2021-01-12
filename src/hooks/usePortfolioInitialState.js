@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import React from "react";
 
 const usePortfolioInitialState = (API) => {
-  const [reposInfo, setReposInfo] = useState({});
+  const [reposInfo, setReposInfo] = React.useState([]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetch(API)
       .then((response) => response.json())
       .then((data) => setReposInfo(data));

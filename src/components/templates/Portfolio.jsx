@@ -1,59 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
+import usePortfolioInitialState from "../../hooks/usePortfolioInitialState.js";
+import ProjectCarousel from "../organisms/ProjectCarousel.jsx";
+import ProjectItem from "../molecules/ProjectItem.jsx";
+import "../../assets/styles/templates/Portfolio.scss";
 
 const API = "https://api.github.com/users/tegdv/repos";
 
-class Portfolio extends React.Component {
-  state = {
-    count: 1,
-  };
+const Portfolio = () => {
+  const reposInfo = usePortfolioInitialState(API);
+  console.log(Object.entries(reposInfo));
 
-  clickNext = (reposInfo) => {
-    if (this.state.count < reposInfo.length) {
-      this.setState({
-        count: this.state.count + 1,
-      });
-    } else {
-      this.setState({
-        count: 1,
-      });
-    }
-  };
-
-  clickPrevious = (reposInfo) => {
-    if (this.state.count > 1) {
-      this.setState({
-        count: this.state.count - 1,
-      });
-    } else {
-      this.setState({
-        count: reposInfo.length,
-      });
-    }
-  };
-
-  render() {
-    const [reposInfo, setReposInfo] = useState({});
-
-    useEffect(() => {
-      fetch(API)
-        .then((response) => response.json())
-        .then((data) => setReposInfo(data));
-    }, []);
-
-    return reposInfo.length === 0 ? (
-      <h1 className="loading">Loading ...</h1>
-    ) : (
-      <section className="portfolio_section">
-        <p>carousel</p>
-        <p>get in touch</p>
-        <p>
-          {count}/{reposInfo.length}
-        </p>
-        <button>{`<-`}</button>
-        <button>{`->`}</button>
-      </section>
-    );
-  }
-}
+  return reposInfo.length === 0 ? (
+    <h1 className="loading">Loading ...</h1>
+  ) : (
+    <section className="portfolio_section">
+      <ProjectCarousel>
+        {reposInfo.map((repo) => (
+          <ProjectItem
+            key={repo.name}
+            name={repo.name}
+            resume={repo.description}
+            url={repo.html_url}
+          />
+        ))}
+      </ProjectCarousel>
+    </section>
+  );
+};
 
 export default Portfolio;
